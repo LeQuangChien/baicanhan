@@ -108,20 +108,38 @@ document.body.insertAdjacentHTML(
 </footer>
 `
 );
+document.body.insertAdjacentHTML(
+  "beforeend",
+  `
+  <section id="main_layout">
+    <div class="div2">
+      <table border="1" class="khung">
+        <tr>
+          <th onclick="handleFirstSelection()">Lựa chọn hàng đầu của chúng tôi</th>
+          <th onclick="handleSortBaseOnPrice()">Ưu tiên giá thấp nhất</th>
+          <th onclick="handleSortBaseOnRate()">Xếp hạng sao</th>
+        </tr>
+      </table>
+    </div>
+  </section>
+  `
+);
 
 // JavaScript functions for interactions
-function handleApplyRating(rating) {
+export function handleApplyRating(rating) {
   alert(`You selected a ${rating}-star rating.`);
 }
 
-function handleFirstSelection() {
+export function handleFirstSelection() {
   alert("Showing top recommendations.");
 }
 
-function handleSortBaseOnPrice() {
+export function handleSortBaseOnPrice() {
   alert("Sorting by lowest price.");
 }
 
-function handleSortBaseOnRate() {
+export function handleSortBaseOnRate() {
   alert("Sorting by star rating.");
 }
+
+
